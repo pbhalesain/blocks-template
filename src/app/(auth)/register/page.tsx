@@ -1,19 +1,24 @@
 import Link from "next/link"
 
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { SignupForm } from "@/components/auth/register-form"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export default function SignupPage() {
   return (
+    <>
     <SignupForm/>
+    <Link
+    href="/login"
+    className={cn(
+      buttonVariants({ variant: "ghost" }),
+      "absolute right-4 top-4 md:right-8 md:top-8"
+    )}
+  >
+    Login
+  </Link>
+  <ThemeToggle/>
+  </>
   )
 }

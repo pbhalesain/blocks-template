@@ -1,13 +1,11 @@
-import Image from 'next/image'
 
-import Illustration from '../../public/images/hero-illustration.svg'
-import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from './page-header';
-import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
-import { buttonVariants } from './ui/button';
-import { Icons } from './icons';
-import { Announcement } from './anouncement';
+import Link from 'next/link';
+import { Announcement } from '../anouncement';
+import { Icons } from '../icons';
+import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '../page-header';
+import { buttonVariants } from '../ui/button';
 
 export default function Hero() {
   return (

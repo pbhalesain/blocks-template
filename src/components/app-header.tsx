@@ -1,4 +1,3 @@
-import Link from "next/link"
 import {
   CircleUser,
   Home,
@@ -10,20 +9,22 @@ import {
   ShoppingCart,
   Users,
 } from "lucide-react"
+import Link from "next/link"
 
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-  import { Input } from "@/components/ui/input"
-  import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Button } from "./ui/button"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Input } from "@/components/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { ThemeToggle } from "./theme-toggle"
 import { Badge } from "./ui/badge"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card"
+import { Button } from "./ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
   
 
 export function AppHeader() {
@@ -135,6 +136,7 @@ export function AppHeader() {
             <DropdownMenuItem>Logout</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+        <ThemeToggle />
       </header>
     );
 

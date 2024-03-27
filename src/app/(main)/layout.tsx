@@ -1,8 +1,5 @@
 import { AppFooter } from "@/components/app-footer"
 import { AppHeader } from "@/components/app-header"
-import { AppNav } from "@/components/app-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge, Bell, Home, LineChart, Package, Package2, ShoppingCart, Users } from "lucide-react"

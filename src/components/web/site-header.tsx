@@ -1,12 +1,12 @@
 import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
-import { ModeToggle } from "@/components/mode-toggle"
 import { buttonVariants } from "@/components/ui/button"
+import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
+import { ThemeToggle } from "../theme-toggle"
 
 export function SiteHeader() {
   return (
@@ -51,7 +51,7 @@ export function SiteHeader() {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
-            <ModeToggle />
+            <ThemeToggle />
           </nav>
         </div>
       </div>

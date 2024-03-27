@@ -13,8 +13,8 @@ import { Label } from "@/components/ui/label"
 
 export function SignupForm() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="max-w-md w-full rounded-lg shadow-md p-8">
     <Card className="mx-auto max-w-sm">
       <CardHeader>
         <CardTitle className="text-xl">Sign Up</CardTitle>

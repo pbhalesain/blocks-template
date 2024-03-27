@@ -1,5 +1,6 @@
-import Hero from "@/components/hero";
-import Image from "next/image";
+import Features from "@/components/web/features";
+import Hero from "@/components/web/hero";
+import PressLogos from "@/components/web/perss-logos";
 
 {/*<Hero />
     <PressLogos />
@@ -15,6 +16,8 @@ export default function Home() {
     <>
    
     <Hero/>
+    <PressLogos />
+    <Features/>
     </>
   );
 }

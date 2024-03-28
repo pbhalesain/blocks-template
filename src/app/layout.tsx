@@ -1,12 +1,12 @@
+import { ThemeProvider } from "@/components/providers";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { fontSans } from "@/styles/fonts";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -79,7 +79,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn(
             "min-h-screen bg-background font-sans antialiased",
-            inter.className
+            fontSans.variable
           )} >
             <ThemeProvider
             attribute="class"

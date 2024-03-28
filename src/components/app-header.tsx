@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { PosSwitch } from "./pos-switch"
 import { ThemeToggle } from "./theme-toggle"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
@@ -120,6 +121,7 @@ export function AppHeader() {
             </div>
           </form>
         </div>
+        <PosSwitch/>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">

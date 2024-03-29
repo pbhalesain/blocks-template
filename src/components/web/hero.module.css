@@ -1,0 +1,39 @@
+.heroContainer {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+	background: linear-gradient(30deg,
+			hsl(var(--primary) / 0.9) 0%,
+			hsl(var(--secondary) / 0.9) 25%,
+			hsl(var(--accent) / 0.9) 40%,
+			hsl(var(--muted) / 0.9) 30%,
+			hsl(var(--secondary) / 0.9) 10%);
+	background-size: 400% 400%;
+	animation: gradientAnimation 15s ease-in-out cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite;
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	25% {
+		background-position: 100% 25%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	75% {
+		background-position: 0% 25%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}

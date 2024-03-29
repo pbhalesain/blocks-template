@@ -16,8 +16,8 @@
     /* #FFFFFF */
     --popover-foreground: 25 20% 20%;
     /* #3F3F3F */
-    --primary: 25 94% 66%;
-    /* #FFA34D */
+    --primary: 212 44% 38%;
+    /* #002147 (Oxford Blue) */
     --primary-foreground: 210 40% 98%;
     /* #FFF5F5 */
     --secondary: 35 100% 90%;
@@ -46,42 +46,42 @@
   }
 
   .dark {
-    --background: 25 42% 20%;
-    /* #503B38 */
+    --background: 212 44% 18%;
+    /* #002B3E (Dark Oxford Blue) */
     --foreground: 35 100% 97%;
     /* #FFF7F5 */
-    --card: 25 42% 25%;
-    /* #5D4845 */
+    --card: 212 44% 23%;
+    /* #003C53 */
     --card-foreground: 35 100% 97%;
     /* #FFF7F5 */
-    --popover: 25 42% 25%;
-    /* #5D4845 */
+    --popover: 212 44% 23%;
+    /* #003C53 */
     --popover-foreground: 35 100% 97%;
     /* #FFF7F5 */
-    --primary: 35 100% 90%;
-    /* #FFECD9 */
-    --primary-foreground: 25 42% 20%;
-    /* #503B38 */
-    --secondary: 25 42% 30%;
-    /* #6A5654 */
+    --primary: 212 80% 60%;
+    /* #5EB3E4 (Light Oxford Blue) */
+    --primary-foreground: 212 44% 18%;
+    /* #002B3E */
+    --secondary: 212 44% 28%;
+    /* #004666 */
     --secondary-foreground: 35 100% 97%;
     /* #FFF7F5 */
-    --muted: 25 42% 30%;
-    /* #6A5654 */
+    --muted: 212 44% 28%;
+    /* #004666 */
     --muted-foreground: 35 100% 97%;
     /* #FFF7F5 */
-    --accent: 25 42% 30%;
-    /* #6A5654 */
+    --accent: 212 44% 28%;
+    /* #004666 */
     --accent-foreground: 35 100% 97%;
     /* #FFF7F5 */
     --destructive: 0 62.8% 30.6%;
     /* #7F1D1D */
     --destructive-foreground: 35 100% 97%;
     /* #FFF7F5 */
-    --border: 25 42% 30%;
-    /* #6A5654 */
-    --input: 25 42% 30%;
-    /* #6A5654 */
+    --border: 212 44% 28%;
+    /* #004666 */
+    --input: 212 44% 28%;
+    /* #004666 */
     --ring: 35 100% 97%;
     /* #FFF7F5 */
   }
@@ -106,5 +106,39 @@
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  min-height: calc(-8.6rem + 100vh);
+  min-height: calc(-4rem + 100vh);
+}
+
+.heroContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(60deg, #f79533, #f37055, #ec4899, #8b5cf6, #2dd4bf, #2dd4bf, #2dd4bf, #f79533);
+  background-size: 800% 800%;
+  animation: gradientAnimation 30s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

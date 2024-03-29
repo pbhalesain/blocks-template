@@ -1,3 +1,4 @@
+import { CookieConsent } from "@/components/cookie-concent";
 import { ThemeProvider } from "@/components/providers";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -73,15 +74,15 @@ interface RootLayoutProps {
 
 export default function RootLayout({
   children,
-}: RootLayoutProps ) {
+}: RootLayoutProps) {
   return (
     <>
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )} >
-            <ThemeProvider
+      <html lang="en" suppressHydrationWarning>
+        <body className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )} >
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
@@ -92,9 +93,10 @@ export default function RootLayout({
                 {children}
               </div>
             </div>
-            </ThemeProvider>
-      </body>
-    </html>
+          </ThemeProvider>
+          <CookieConsent />
+        </body>
+      </html>
     </>
   );
 }

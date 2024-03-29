@@ -6,10 +6,19 @@ import { Announcement } from '../anouncement';
 import { Icons } from '../icons';
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '../page-header';
 import { buttonVariants } from '../ui/button';
+import styles from './hero.module.css';
 
 export default function Hero() {
   return (
-    <div className="lbUKmY">
+
+    <div p-2>
+     <div className={styles.heroContainer}>
+      <div className={styles.gradientOverlay}></div>
+      <div className={styles.cloudContainer}>
+        <div className={styles.pinkCloud}></div>
+        <div className={styles.blueCloud}></div>
+      </div>
+      <div className={styles.heroContent}>
       <PageHeader>
         <Announcement />
         <PageHeaderHeading>Block Template Boilerplate</PageHeaderHeading>
@@ -31,6 +40,9 @@ export default function Hero() {
           </Link>
         </PageActions>
       </PageHeader>
+      </div>
     </div>
+    </div>
+
   );
 }

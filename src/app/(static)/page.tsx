@@ -13,11 +13,12 @@ import PressLogos from "@/components/web/perss-logos";
 
 export default function Home() {
   return (
+  
     <>
-   
-    <Hero/>
-    <PressLogos />
-    <Features/>
-    </>
+          <Hero />
+          <PressLogos />
+          <Features />
+     
+          </>
   );
 }

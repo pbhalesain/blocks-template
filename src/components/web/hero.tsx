@@ -9,7 +9,7 @@ import { buttonVariants } from '../ui/button';
 
 export default function Hero() {
   return (
-    <div className="container relative">
+    <div className="lbUKmY">
       <PageHeader>
         <Announcement />
         <PageHeaderHeading>Block Template Boilerplate</PageHeaderHeading>

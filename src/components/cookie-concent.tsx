@@ -46,7 +46,7 @@ export const CookieConsent = () => {
 				</a>
 				.
 			</div>
-			<Button variant="primary" size="sm">
+			<Button variant="default" size="sm">
 				<span className="tracking-[0.01em] font-mono text-base uppercase leading-[1.1] font-semibold">
 					Ok, got it
 				</span>
@@ -54,5 +54,6 @@ export const CookieConsent = () => {
 		</div>
 	);
 };
+
 
 export default CookieConsent;

@@ -1,12 +1,11 @@
-import Link from "next/link"
 
-import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { buttonVariants } from "@/components/ui/button"
-import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 import { ThemeToggle } from "../theme-toggle"
+import NavigationMenuDemo from "./nav"
 
 export function SiteHeader() {
   return (
@@ -15,46 +14,24 @@ export function SiteHeader() {
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          
+          <div className="flex justify-start mx-auto my-4">
+            <NavigationMenuDemo />
+          </div>
           <nav className="flex items-center">
             <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
+              href="/docs"
+              className={cn(
+                buttonVariants({ size: "lg", variant: "default" }),
+                "font-semibold text-white bg-primary hover:bg-primary-600 rounded-[4rem] transition-colors duration-200"
+              )}
             >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0"
-                )}
-              >
-                <Icons.gitHub className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </div>
+              Login
             </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "w-9 px-0"
-                )}
-              >
-                <Icons.twitter className="h-3 w-3 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
+
             <ThemeToggle />
           </nav>
         </div>
       </div>
-    </header>
+    </header >
   )
 }

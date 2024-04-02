@@ -1,39 +1,37 @@
 
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
+import Image from "next/image";
 import Link from 'next/link';
 import { Announcement } from '../anouncement';
 import { Icons } from '../icons';
-import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '../page-header';
+import { PageActions, PageHeader, PageHeaderDescription } from '../page-header';
 import { buttonVariants } from '../ui/button';
 import styles from './hero.module.css';
 
 export default function Hero() {
   return (
 
-    <div p-2>
+    <div className="md:justify-end justify-center items-center grid grid-cols-2 grid-rows-1 gap-0">
       <div className={styles.heroContainer}>
-        <div className={styles.gradientOverlay}></div>
-        <div className={styles.cloudContainer}>
-          <div className={styles.pinkCloud}></div>
-          <div className={styles.blueCloud}></div>
-        </div>
-        <div className={styles.heroContent}>
+        <div className='my-auto mb-52 tablet:w-2/3 desktop:w-1/2'>
           <PageHeader>
             <Announcement />
-            <PageHeaderHeading>Block Template Boilerplate</PageHeaderHeading>
+            <h1 className="font-sans text-left tracking-[-0.01em] text-5xl leading-[1.1] tablet:text-6xl mb-6"><span
+            >Empathic AI to serve </span><br /><span>Small Businesses</span>
+            </h1>
             <PageHeaderDescription>
-              Beautifully designed components from @shadcn. Accessible. Customizable. Open Source.
+              <span> Empowering small businesses with empathic AI solutions that truly understand your unique needs.</span>
             </PageHeaderDescription>
             <PageActions>
               <Link
                 href="/docs"
                 className={cn(
-                  buttonVariants({ size: "lg", variant: "primary" }),
+                  buttonVariants({ size: "lg", variant: "default" }),
                   "font-semibold text-white bg-primary hover:bg-primary-600 rounded-[4rem] transition-colors duration-200"
                 )}
               >
-                Get Started
+                Join Waitlist
               </Link>
               <Link
                 target="_blank"
@@ -41,14 +39,23 @@ export default function Hero() {
                 href={siteConfig.links.github}
                 className={cn(buttonVariants({ size: "lg", variant: "outline" }), " hover:bg-secondary-600 transition-colors duration-200 rounded-[4rem]")}
               >
-                <Icons.gitHub className="mr-2 h-4 w-4" />
-                GitHub
+                <Icons.graduationcap className="mr-6 h-4 w-4" />
+                {'  '}Learn More
               </Link>
             </PageActions>
           </PageHeader>
         </div>
       </div>
-    </div>
+      <div className={styles.heroContainer}>
+        <Image
+          src="/images/munimji2.png"
+          alt="Image"
+          width="1920"
+          height="1080"
+          className="h-full w-full object-cover dark:brightness-[0.6] dark:grayscale"
+        />
+      </div>
+    </div >
 
   );
 }

@@ -1,92 +1,148 @@
-import Image from 'next/image'
-import FeaturesImage from '../../../public/images/features.svg'
+import { Icons } from '@/components/icons'
+import { CardContent } from '../ui'
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
 
-export default function Features() {
+const features = [
+  {
+    title: 'AI-driven Insights',
+    description:
+      'Personalized recommendations tailored to your business goals.',
+    icon: <Icons.aria className="text-primary" />,
+  },
+  {
+    title: 'Empathic Support',
+    description:
+      'AI assistants with a human touch, understanding your unique needs.',
+    icon: <Icons.aria className="text-primary" />,
+  },
+  {
+    title: 'Seamless Integration',
+    description:
+      'AI solutions that integrate seamlessly with your existing workflows.',
+    icon: <Icons.aria className="text-primary" />,
+  },
+  {
+    title: 'Data-driven Optimization',
+    description:
+      'Leverage AI-powered analytics to optimize your operations and drive growth.',
+    icon: <Icons.aria className="text-primary" />,
+  },
+]
+
+export default function FeaturesSection() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20">
-          {/* Section header */}
-          <div className="text-center pb-12 md:pb-20">
-            <h2 className="h2 font-uncut-sans" data-aos="zoom-out">Focus on solving bigger problems</h2>
-          </div>
-          <div className="pb-16" data-aos="zoom-out">
-            <Image src={FeaturesImage} alt="Features" />
-          </div>
-          {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-3 lg:gap-16 items-start md:max-w-none">
-            {/* 1st item */}
-            <div className="flex flex-col items-center" data-aos="zoom-out">
-              <div className="mb-4">
-                <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                  <defs>
-                    <radialGradient cx="50%" cy="89.845%" fx="50%" fy="89.845%" r="89.85%" id="icon1-b">
-                      <stop stopColor="#3B82F6" stopOpacity=".64" offset="0%" />
-                      <stop stopColor="#F472B6" stopOpacity=".876" offset="100%" />
-                    </radialGradient>
-                    <circle id="icon1-a" cx="28" cy="28" r="28" />
-                  </defs>
-                  <g fill="none" fillRule="evenodd">
-                    <use fill="url(#icon1-b)" xlinkHref="#icon1-a" />
-                    <g stroke="#FDF2F8" strokeLinecap="square" strokeWidth="2">
-                      <path d="M17 28h22" opacity=".64" />
-                      <path d="M20 23v-3h3M33 20h3v3M36 33v3h-3M23 36h-3v-3" />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <h4 className="h4 text-gray-200 text-center mb-2">Ready for the future</h4>
-              <p className="text-lg text-gray-400 text-center">A flexible foundation that evolves with complex ecosystem.</p>
-            </div>
-            {/* 2nd item */}
-            <div className="flex flex-col items-center" data-aos="zoom-out" data-aos-delay="200">
-              <div className="mb-4">
-                <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                  <defs>
-                    <radialGradient cx="50%" cy="89.845%" fx="50%" fy="89.845%" r="89.85%" id="icon2-b">
-                      <stop stopColor="#3B82F6" stopOpacity=".64" offset="0%" />
-                      <stop stopColor="#F472B6" stopOpacity=".876" offset="100%" />
-                    </radialGradient>
-                    <circle id="icon2-a" cx="28" cy="28" r="28" />
-                  </defs>
-                  <g fill="none" fillRule="evenodd">
-                    <use fill="url(#icon2-b)" xlinkHref="#icon2-a" />
-                    <g stroke="#FDF2F8" strokeLinecap="square" strokeWidth="2">
-                      <path d="m22 24-4 4 4 4M34 24l4 4-4 4" />
-                      <path d="m26 36 4-16" opacity=".64" />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <h4 className="h4 text-gray-200 text-center mb-2">Ready for the future</h4>
-              <p className="text-lg text-gray-400 text-center">A flexible foundation that evolves with complex ecosystem.</p>
-            </div>
-            {/* 3rd item */}
-            <div className="flex flex-col items-center" data-aos="zoom-out" data-aos-delay="400">
-              <div className="mb-4">
-                <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                  <defs>
-                    <radialGradient cx="50%" cy="89.845%" fx="50%" fy="89.845%" r="89.85%" id="icon3-b">
-                      <stop stopColor="#3B82F6" stopOpacity=".64" offset="0%" />
-                      <stop stopColor="#F472B6" stopOpacity=".876" offset="100%" />
-                    </radialGradient>
-                    <circle id="icon3-a" cx="28" cy="28" r="28" />
-                  </defs>
-                  <g fill="none" fillRule="evenodd">
-                    <use fill="url(#icon3-b)" xlinkHref="#icon3-a" />
-                    <g stroke="#FDF2F8" strokeLinecap="square" strokeWidth="2">
-                      <path d="m18 31 4 4 12-15" />
-                      <path d="M39 25h-3M39 30h-7M39 35H28" opacity=".64" />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <h4 className="h4 text-gray-200 text-center mb-2">Ready for the future</h4>
-              <p className="text-lg text-gray-400 text-center">A flexible foundation that evolves with complex ecosystem.</p>
-            </div>
-          </div>
+
+      <div className="container p-20 md:justify-end justify-center items-center grid grid-cols-2 grid-rows-3 gap-10">
+        <div >
+          <Card className='w-full bg-blue-100'>
+            <CardHeader>
+              <CardTitle>
+                <div className="flex items-center space-x-4">
+                  <span><Icons.alarmclock /></span>
+                  <div>
+                    <p className="leading-none">Automate Repetitive Tasks</p>
+                  </div>
+                </div>
+              </CardTitle>
+              <CardDescription>Streamline Your Workflow with Automation.</CardDescription>
+            </CardHeader>
+            <CardContent className=' h-[15rem]'>
+              <div> <span>Say goodbye to time-consuming, repetitive tasks and hello to increased productivity. Our Generative AI assistant automates tedious processes, freeing up your team to focus on strategic priorities.</span></div>
+              <br />
+              <br />
+              <div><li>Eliminate manual data entry and document processing</li>
+
+
+                <li>Automate customer support and client communications</li>
+                <li>Streamline invoicing, payroll, and other financial tasks
+                </li></div>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              <p> Reclaim your time and resources. Implement our Generative AI automation solutions today.</p>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="col-start-2 row-start-2">
+          <Card className="w-full">
+            <CardHeader>
+              <CardTitle>  <div className="flex items-center space-x-4">
+                <span><Icons.handshake /></span>
+                <div>
+                  <p className="leading-none">Enhance Customer Experiences</p>
+                </div>
+              </div></CardTitle>
+              <CardDescription>Personalize Your Customer Interactions.</CardDescription>
+            </CardHeader>
+            <CardContent className=' h-[15rem]'>
+              <div> <span>Deliver exceptional customer service and build stronger relationships with our Generative AI assistant. Provide tailored responses and personalized experiences that keep your clients coming back.</span></div>
+              <br />
+              <br />
+              <div><li>Engage customers with natural, human-like conversations</li>
+
+
+                <li>Offer personalized recommendations and solutions</li>
+                <li>Provide 24/7 support and instant responses
+                </li></div>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              Transform your customer service with the power of Generative AI. Start today.
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="row-start-3">
+          <Card className="w-full bg-purple-100">
+            <CardHeader>
+              <CardTitle>
+                <div className="flex items-center space-x-4">
+                  <span><Icons.braincog /></span>
+                  <div>
+                    <p className="leading-none">Unlock the Power of Advanced AI</p>
+                  </div>
+                </div>
+              </CardTitle>
+              <CardDescription>Access Cutting-Edge AI Technology.</CardDescription>
+            </CardHeader>
+            <CardContent className=' h-[15rem]'>
+              <div> <span>Leverage the latest advancements in artificial intelligence without the hefty price tag. Our Generative AI assistant provides enterprise-grade capabilities at a fraction of the cost.</span></div>
+              <br /><br />
+              <div><li>Harness the power of natural language processing and generation</li>
+                <li>Integrate intelligent automation to boost efficiency</li>
+                <li>Gain access to cutting-edge machine learning models</li></div>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              Elevate your business with affordable, cutting-edge AI technology. Sign up now.
+            </CardFooter>
+          </Card>
+        </div>
+
+        <div className="col-start-2 row-start-4">
+          <Card className="w-full bg-green-100">
+            <CardHeader>
+              <CardTitle>
+                <div className="flex items-center space-x-4">
+                  <span><Icons.areachart /></span>
+                  <div>
+                    <p className="leading-none">Make Data-Driven Decisions</p>
+                  </div>
+                </div>
+              </CardTitle>
+              <CardDescription>Gain Powerful Insights for Your Business.</CardDescription>
+            </CardHeader>
+            <CardContent className=' h-[15rem]'>
+              <div> <span>Unlock the full potential of your data with our Generative AI-powered analytics and reporting tools. Make informed decisions that drive your business forward.</span></div>
+              <br /><br />
+              <div><li>Gain deep insights into customer behavior and preferences</li>
+                <li>Identify trends and patterns to inform strategic planning</li>
+                <li>Optimize operations and streamline decision-making</li></div>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              Elevate your decision-making with data-driven intelligence. Sign up now.
+            </CardFooter>
+          </Card>
         </div>
       </div>
-    </section>
+
+    </section >
   )
 }
